@@ -11,10 +11,12 @@ function redimencionar(){
     window.location.href = "https://www.google.com/"; //Na mesma janela
 }
 
-function trocar(){
-    document.getElementById("mouseMove").innerHTML = "<b>Vc passou o mouse</b>";
+function trocar(elemento){
+    //document.getElementById("mouseMove").innerHTML = "<b>Vc passou o mouse</b>";
+    elemento.innerHTML = "<b>Vc passou o mouse</b>";
 }
 
-function voltar(){
-    document.getElementById("mouseMove").innerHTML = "Passe o mouse";
+function voltar(elemento){
+    //document.getElementById("mouseMove").innerHTML = "<b>Vc passou o mouse</b>";
+    elemento.innerHTML = "Passe o mouse";
 }
