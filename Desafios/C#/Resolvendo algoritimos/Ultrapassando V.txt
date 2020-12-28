@@ -1,0 +1,64 @@
+using System;
+using System.Linq;
+
+class MinhaClasse {
+    public static void Main (string[] args) {
+
+    int r = Int32.Parse(Console.ReadLine());
+    int v = 0, contagem = 0, total = 0;
+    bool loop = true;
+
+    if (r >=0)
+    {
+        do
+        {
+            v = Int32.Parse(Console.ReadLine());
+
+            if (v > r)
+            {
+                loop = false;
+            }
+        
+        } while (loop);
+
+        for (int x = r; x <= v; x++)
+        {
+            contagem++;
+            total += x;
+
+            if (total > v)
+            {
+                Console.WriteLine(contagem);
+                break;
+            }
+        }
+    }
+    else
+    {
+        do
+        {
+            v = Int32.Parse(Console.ReadLine());
+
+            if (v > r)
+            {
+                loop = false;
+            }
+        
+        } while (loop);
+
+        total += r;
+        
+        for (int x = r; x <= v; x++)
+        {
+            contagem++;
+            
+        }
+        
+        Console.WriteLine(contagem);
+        //break;
+        
+    }
+
+
+    }
+}

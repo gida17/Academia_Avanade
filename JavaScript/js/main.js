@@ -20,3 +20,11 @@ function voltar(elemento){
     //document.getElementById("mouseMove").innerHTML = "<b>Vc passou o mouse</b>";
     elemento.innerHTML = "Passe o mouse";
 }
+
+function load(){
+    alert("Página carregada");
+}
+
+function funcaoChange(elemento){
+    console.log(elemento.value);
+}
