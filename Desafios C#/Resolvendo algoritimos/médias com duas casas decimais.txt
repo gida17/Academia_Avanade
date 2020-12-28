@@ -1,0 +1,21 @@
+    double somaNotas = 0, entradaNotas, media;
+    int contador = 0;
+      
+    do
+    {
+        entradaNotas = double.Parse(Console.ReadLine());
+        
+        if(entradaNotas < 0 || entradaNotas > 10)
+        {
+            Console.WriteLine("nota invalida");
+            
+        } else {
+            contador++;
+            somaNotas += entradaNotas; 
+        }
+        
+    } while (contador < 2);
+
+    media = somaNotas / 2;
+      
+    Console.WriteLine("media = " + media.ToString("N2"));
