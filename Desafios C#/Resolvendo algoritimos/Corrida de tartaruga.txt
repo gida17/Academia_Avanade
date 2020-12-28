@@ -1,0 +1,60 @@
+using System;
+using System.Linq;
+
+class MinhaClasse {
+    public static void Main (string[] args) {
+
+        int quantidade; //= Int32.Parse(Console.ReadLine());
+        string[] line2;
+        bool canConvertCa;
+        int max = 0;
+       
+        for (int i = 0; i < 3; i++)
+        {
+            max = 0;
+            quantidade = Int32.Parse(Console.ReadLine());
+            line2 = Console.ReadLine().Split(" ");
+            
+            if (quantidade>=1 && quantidade<=500)
+            {
+                int[] lista = new int[quantidade];
+
+                for (int x = 0; x < quantidade; x++)
+                {
+                    canConvertCa = int.TryParse(line2[x], out lista[x]);
+                }
+
+                for (int j = 0; j < quantidade; j++)
+                {
+                    if (lista[j]<1 || lista[j]>50)
+                    {
+                        break;
+                    }
+                }
+
+                for (int y = 0; y < quantidade; y++)
+                {
+                    if (lista[y]>max)
+                    {
+                        max = lista[y];
+                    }
+                }
+
+                if (max < 10)
+                {
+                    Console.WriteLine("1");
+                }else if (max>=10 && max<20)
+                {
+                    Console.WriteLine("2");
+                }
+                else
+                {
+                    //Console.WriteLine(max);
+                    Console.WriteLine("3");
+                }
+                    
+            }
+        }
+        
+    }
+}

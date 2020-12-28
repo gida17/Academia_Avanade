@@ -1,0 +1,50 @@
+using System;
+
+
+namespace teste
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           string[] line = Console.ReadLine().Split(" ");;
+           int n, d, totalPessoas = 0, prov;
+           string data;
+           bool achado = true;
+           
+           bool canConvertCa = int.TryParse(line[0], out n);
+           bool canConvertBa = int.TryParse(line[1], out d);
+
+           for (int x = 0; x < d; x++)
+           {
+               string[] datas = Console.ReadLine().Split(" ");;
+
+               data = datas[0];
+
+               for (int y = 0; y < n; y++)
+               {
+                   prov = int.Parse(datas[y + 1]);
+                   totalPessoas += prov;
+               }
+
+               if (totalPessoas == n)
+               {
+                   Console.WriteLine(data);
+                   achado = false;
+                   break;
+               }
+               else
+               {
+                   totalPessoas = 0;
+               }
+
+           }
+
+           if (achado)
+           {
+               Console.WriteLine("Pizza antes de FdA");
+           }
+
+        }
+    }
+}
